@@ -3,6 +3,14 @@
            https://api.github.com/users/<your name>
 */
 
+axios.get('https://api.github.com/users/Pmtague')
+  .then( response => {
+    console.log('response', response)
+  })
+  .catch( error => {
+    console.log('Error:', error)
+  })
+
 /* Step 2: Inspect and study the data coming back, this is YOUR 
    github info! You will need to understand the structure of this 
    data in order to use it to build your component function 
@@ -53,3 +61,50 @@ const followersArray = [];
   luishrd
   bigknell
 */
+
+const cards = document.querySelector('.cards');
+
+
+
+// Create and Return DOM Node
+function createCard(object) {
+  
+  // Create Elements
+  const card = document.createElement('div');
+  const image = document.createElement('img');
+  const info = document.createElement('div');
+  const name = document.createElement('h3');
+  const username = document.createElement('p');
+  const location = document.createElement('p');
+  const profile = document.createElement('p');
+  const link = document.createElement('a');
+  const followers = document.createElement('p');
+  const following = document.createElement('p');
+  const bio = document.createElement('p');
+
+  // Set Structure
+  card.appendChild(image);
+  card.appendChild(info);
+  info.appendChild(name);
+  info.appendChild(username);
+  info.appendChild(location);
+  info.appendChild(profile);
+  profile.appendChild(link);
+  info.appendChild(followers);
+  info.appendChild(following);
+  info.appendChild(bio);
+
+  // Set Class Names
+  card.classList.add('card');
+  info.classList.add('card-info');
+  name.classList.add('name');
+  username.classList.add('username');
+
+  // Set Content
+
+
+  // Put Together (appendChild)
+
+
+  return card
+}
